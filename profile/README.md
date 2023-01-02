@@ -4,7 +4,7 @@ The Cosmos org is collection of teams working on decentralized technology.
 
 ## Repositories
 
-### Golang
+### Go
 
 - [Cosmos SDK](https://github.com/cosmos/cosmos-sdk) - An SDK to develop a decentralized state machine
 	- Documentation can be found at [https://docs.cosmos.network/main](https://docs.cosmos.network/main)
