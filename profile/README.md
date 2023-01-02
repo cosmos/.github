@@ -7,6 +7,7 @@ The Cosmos org is collection of teams working on decentralized technology.
 ### Golang
 
 - [Cosmos SDK](https://github.com/cosmos/cosmos-sdk) - An SDK to develop a decentralized state machine
+	- Documentation can be found at [https://docs.cosmos.network/main](https://docs.cosmos.network/main)
 - [IBC-GO](https://github.com/cosmos/ibc-go) - An implementation of [IBC](https://github.com/cosmos/ibc) in [Golang](https://go.dev)
 - [IAVL](https://github.com/cosmos/iavl) - An implementation of an immutable merkleized AVL tree
 - [Cosmos-db](https://github.com/cosmos/cosmos-db) - A library of databases which can be used as the database for a Cosmos state machine.
