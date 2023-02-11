@@ -2,17 +2,21 @@
 
 The Cosmos org is collection of teams working on decentralized technology.
 
-## Documentation
+## Quick Start
 
 * [Developer Portal](https://tutorials.cosmos.network/)
+
+## Documentation
+
 * [Cosmos SDK](https://docs.cosmos.network)
 * [IBC Go](https://ibc.cosmos.network)
-* [Cosmos Hub](https://hub.cosmos.network)
-* [Roadmaps](https://github.com/orgs/cosmos/projects)
+* [Cosmos Rust](https://github.com/cosmos/cosmos-rust/blob/main/README.md)
+* [CosmJS](https://tutorials.cosmos.network/tutorials/7-cosmjs/)
 
 ## Participate
 
-* [Cosmos Stack Discussions](https://github.com/orgs/cosmos/discussions)
+* [Roadmaps](https://github.com/orgs/cosmos/projects)
+* [Discussions & Product Feedback](https://github.com/orgs/cosmos/discussions)
 * [Cosmos Hub Forum](https://forum.cosmos.network)
 
 ---
