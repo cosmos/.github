@@ -4,6 +4,7 @@ The Cosmos org is collection of teams working on decentralized technology.
 
 ## Documentation
 
+* [Developer Portal](https://tutorials.cosmos.network/)
 * [Cosmos SDK](https://docs.cosmos.network)
 * [IBC Go](https://ibc.cosmos.network)
 * [Cosmos Hub](https://hub.cosmos.network)
@@ -11,8 +12,8 @@ The Cosmos org is collection of teams working on decentralized technology.
 
 ## Participate
 
+* [Cosmos Stack Discussions](https://github.com/orgs/cosmos/discussions)
 * [Cosmos Hub Forum](https://forum.cosmos.network)
-* [Cosmos Discussions](https://github.com/orgs/cosmos/discussions)
 
 ---
 
