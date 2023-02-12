@@ -15,7 +15,7 @@ The Cosmos org is collection of teams working on decentralized technology.
 
 ## Participate
 
-* [Roadmaps](https://github.com/orgs/cosmos/projects)
+* [Cosmos Developers Discord](https://discord.com/invite/cosmosnetwork)
 * [Discussions & Product Feedback](https://github.com/orgs/cosmos/discussions)
 * [Cosmos Hub Forum](https://forum.cosmos.network)
 
