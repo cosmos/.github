@@ -2,14 +2,9 @@
 
 A collection of teams working on decentralized technology for the internet of blockchains - The Interchain.
 
-<div style="display: flex; justify-content: space-around; margin-bottom: 1em;">
-  <div style="text-align: center;">
-    <a href="https://tutorials.cosmos.network"><strong>Developer Portal</strong></a> - Quick Start
-  </div>
-  <div style="text-align: center;">
-    <a href="https://discord.com/invite/interchain"><strong>Interchain Discord</strong></a> - For Support and Community
-  </div>
-</div>
+| [Developer Portal](https://tutorials.cosmos.network) - Quick Start | -  | [Interchain Discord](https://discord.com/invite/interchain) - For Support and Community |
+|:---:|:---:|:---:|
+
 
 ## Interchain Stack Components
 
