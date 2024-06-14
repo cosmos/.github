@@ -22,6 +22,4 @@ A collection of teams working on decentralized technology for the internet of bl
 
 #### Participate: [Interchain Developers Discord](https://discord.com/invite/interchain) - [Discussions & Product Feedback](https://github.com/orgs/cosmos/discussions) - [Cosmos Hub Forum](https://forum.cosmos.network)
 
----
-
 Discover other awesome interchain projects on [Awesome Cosmos](https://github.com/cosmos/awesome-cosmos), [Awesome CosmWasm](https://github.com/CosmWasm/awesome-cosmwasm), and [Cosmos Rust](https://github.com/cosmos/cosmos-rust/blob/main/README.md).
