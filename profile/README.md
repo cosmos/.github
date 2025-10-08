@@ -39,6 +39,6 @@ Cosmos Labs is a wholly-owned subsidiary of the [Interchain Foundation](https://
 The Cosmos Stack is supported by a robust community of open-source contributors. 
 
 ## Security
-Read about updates and security processes in the [Security repo](https://github.com/interchainio/security). 
+Read about updates and security processes in the [Security repo](https://github.com/cosmos/security). 
 
 #### Explore the [Cosmos Network](https://cosmos.network/) to learn more about the Cosmos technology stack and use cases.
