@@ -71,9 +71,9 @@ Community leaders will follow these Community Impact Guidelines in determining t
 
 ### Escalation
 
-A repeat violation after any sanction moves to the next level. A second violation after a temporary ban is permanent.
+A repeat violation after any sanction moves to the next level. A second violation after a temporary ban results in a permanent ban.
 
-Levels are determined by severity, not by count. A sufficiently serious first violation may result in a permanent ban without prior steps.
+Community leaders determine the level by the severity of the violation rather than by the number of prior incidents. A sufficiently serious first violation may result in a permanent ban without prior steps.
 
 ## Attribution
 
