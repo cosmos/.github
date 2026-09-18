@@ -1,36 +1,37 @@
 # Contributing
 
-This is the baseline for every repository in the Cosmos organization. Individual
-repositories add their own build, test, and review instructions on top of it.
+This is the baseline for every repository in the Cosmos organization. Each repo
+adds its own build and test instructions on top.
 
 ## Conduct
 
-Participation is governed by the
-[Code of Conduct](https://github.com/cosmos/.github/blob/main/CODE_OF_CONDUCT.md).
-Report concerns to [conduct@cosmos.network](mailto:conduct@cosmos.network).
+The [Code of Conduct](https://github.com/cosmos/.github/blob/main/CODE_OF_CONDUCT.md)
+applies everywhere in this organization. Report concerns to
+[conduct@cosmos.network](mailto:conduct@cosmos.network).
 
 ## Security
 
-Do not open a public issue, pull request, or discussion for a suspected
-vulnerability. Follow the
-[security policy](https://github.com/cosmos/security/blob/main/SECURITY.md).
+Never open a public issue, pull request, or discussion for a suspected
+vulnerability. Use the
+[security policy](https://github.com/cosmos/security/blob/main/SECURITY.md)
+instead.
 
 ## Pull requests
 
 - One logical change per pull request. Split larger work.
-- Say what changed and why, and link the issue it closes.
-- Include tests covering both expected and error paths where the change warrants them.
-- CI must pass before merge.
+- Say what changed and why. Link the issue it closes.
+- Cover the expected path and the error path with tests.
+- Get CI green.
 - Keep your branch current with the base branch.
 
 ## Review
 
-Changes are proposed and reviewed in public on GitHub. Maintainers may close a
-pull request that is out of scope, abandoned by its author, or submitted without
-review by the person opening it.
+We propose and review changes in public on GitHub. Maintainers can close a pull
+request that falls out of scope, that its author has abandoned, or that the
+author never read.
 
 ## AI assistance
 
-AI tooling is fine when you take responsibility for the result. Review what you
-submit and be ready to explain it. Unreviewed generated output is not acceptable,
-and persistent low-effort submissions are handled under the Code of Conduct.
+Use AI tooling if you take responsibility for what it produces. Read it, and be
+ready to explain it. If you have not read it, do not open the pull request.
+Maintainers treat repeated low-effort submissions as a conduct matter.
