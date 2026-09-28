@@ -180,8 +180,10 @@ accept and act on their vulnerability reports during that period, but those
 reports are not eligible for a bounty.
 
 **3. Permanent block.** A pattern of improper disclosure, or publishing with
-intent to cause harm, results in a permanent block from the Cosmos organization.
-The report is ineligible for a bounty, and no further reports are accepted.
+intent to cause harm, results in a permanent block from the Cosmos organization
+and from any pre-disclosure list. The report is ineligible for a bounty. We
+still receive security reports from them, because closing that channel would put
+users at risk, but they take no further part in the project.
 
 Severity determines the level rather than the number of prior instances, so a
 sufficiently serious first instance may result in a permanent block without
