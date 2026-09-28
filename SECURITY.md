@@ -177,6 +177,7 @@ reports are not eligible for a bounty.
 
 **3. Permanent block.** A pattern of improper disclosure, or publishing with
 intent to cause harm, results in a permanent block from the Cosmos organization.
+The report is ineligible for a bounty, and no further reports are accepted.
 
 Severity determines the level rather than the number of prior instances, so a
 sufficiently serious first instance may result in a permanent block without
