@@ -153,9 +153,9 @@ ecosystem.
 
 ## Consequences of Improper Disclosure
 
-Publishing vulnerability details before the disclosure date for that severity,
-set out in the Disclosure Timeline above, puts users at risk whatever the intent.
-For High and Critical issues that date falls well after the fix ships.
+Publishing vulnerability details before their disclosure date puts users at risk
+whatever the intent. For High and Critical issues that date falls well after the
+fix ships.
 
 We give the reporter a disclosure date. That date is the one that counts, and
 where we have not given one, the timeline above applies. Disclosure we have
