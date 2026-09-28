@@ -153,16 +153,19 @@ ecosystem.
 
 ## Consequences of Improper Disclosure
 
-Publishing a vulnerability before a fix has shipped puts users at risk, whatever
-the intent. The consequences below apply to anyone who does so, whether or not
-they submitted through the bug bounty program.
+Publishing vulnerability details before the disclosure date for that severity,
+set out in the Disclosure Timeline above, puts users at risk whatever the intent.
+For High and Critical issues that date falls well after the fix ships.
+
+The consequences below apply to anyone who publishes early, whether or not they
+submitted through the bug bounty program.
 
 Reporters who submit through Immunefi are also bound by the Immunefi publication
 policy, which governs the program and supersedes this section where the two
 conflict.
 
-**1. Report ineligible.** A first instance of publishing details before the fix
-ships makes that report ineligible for a bounty. No further action follows.
+**1. Report ineligible.** A first instance of publishing ahead of the disclosure
+date makes that report ineligible for a bounty. No further action follows.
 
 **2. Suspension.** A repeat instance, or publishing something an attacker can
 act on immediately, makes the report ineligible, removes the reporter from any
