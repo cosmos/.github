@@ -164,8 +164,10 @@ Reporters who submit through Immunefi are also bound by the Immunefi publication
 policy, which governs the program and supersedes this section where the two
 conflict.
 
-**1. Report ineligible.** A first instance of publishing ahead of the disclosure
-date makes that report ineligible for a bounty. No further action follows.
+**1. Warning.** A first instance of publishing ahead of the disclosure date
+results in a written warning from the security response team, recorded for the
+purpose of judging later instances. Where the reporter was eligible for a
+bounty, the report also becomes ineligible.
 
 **2. Suspension.** A repeat instance, or publishing something an attacker can
 act on immediately, makes the report ineligible and removes the reporter from
