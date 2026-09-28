@@ -157,6 +157,10 @@ Publishing vulnerability details before the disclosure date for that severity,
 set out in the Disclosure Timeline above, puts users at risk whatever the intent.
 For High and Critical issues that date falls well after the fix ships.
 
+We give the reporter a disclosure date. That date is the one that counts, and
+where we have not given one, the timeline above applies. Disclosure we have
+authorized is never a violation, whenever it happens.
+
 The consequences below apply to anyone who publishes early, whether or not they
 submitted through the bug bounty program.
 
