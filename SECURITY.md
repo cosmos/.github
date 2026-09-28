@@ -168,9 +168,10 @@ conflict.
 date makes that report ineligible for a bounty. No further action follows.
 
 **2. Suspension.** A repeat instance, or publishing something an attacker can
-act on immediately, makes the report ineligible, removes the reporter from any
-private notification or pre-disclosure list, and stops us accepting new reports
-from them for 3 months.
+act on immediately, makes the report ineligible and removes the reporter from
+any private notification or pre-disclosure list for 3 months. We continue to
+accept and act on their vulnerability reports during that period, but those
+reports are not eligible for a bounty.
 
 **3. Permanent block.** A pattern of improper disclosure, or publishing with
 intent to cause harm, results in a permanent block from the Cosmos organization.
