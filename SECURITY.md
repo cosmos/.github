@@ -151,6 +151,37 @@ ecosystem.
 
 ------------------------------------------------------------------------
 
+## Consequences of Improper Disclosure
+
+Publishing a vulnerability before a fix has shipped puts users at risk, whatever
+the intent. The consequences below apply to anyone who does so, whether or not
+they submitted through the bug bounty program.
+
+Reporters who submit through Immunefi are also bound by the Immunefi publication
+policy, which governs the program and supersedes this section where the two
+conflict.
+
+**1. Report ineligible.** A first instance of publishing details before the fix
+ships makes that report ineligible for a bounty. No further action follows.
+
+**2. Suspension.** A repeat instance, or publishing something an attacker can
+act on immediately, makes the report ineligible, removes the reporter from any
+private notification or pre-disclosure list, and stops us accepting new reports
+from them for 3 months.
+
+**3. Permanent block.** A pattern of improper disclosure, or publishing with
+intent to cause harm, results in a permanent block from the Cosmos organization.
+
+Severity determines the level rather than the number of prior instances, so a
+sufficiently serious first instance may result in a permanent block without
+prior steps.
+
+The security response team decides these actions. To appeal one, write to
+[conduct@cosmos.network](mailto:conduct@cosmos.network), which is independent of
+the team that imposed it.
+
+------------------------------------------------------------------------
+
 ## Repository Scope
 
 Supported components are the ones listed in the current
