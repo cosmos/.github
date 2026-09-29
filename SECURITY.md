@@ -151,6 +151,50 @@ ecosystem.
 
 ------------------------------------------------------------------------
 
+## Consequences of Improper Disclosure
+
+Publishing vulnerability details before their disclosure date puts users at risk
+whatever the intent. For High and Critical issues that date falls well after the
+fix ships.
+
+We give the reporter a disclosure date. That date is the one that counts, and
+where we have not given one, the timeline above applies. Disclosure we have
+authorized is never a violation, whenever it happens.
+
+The consequences below apply to anyone who publishes early, whether or not they
+submitted through the bug bounty program.
+
+Reporters who submit through Immunefi are also bound by the Immunefi publication
+policy, which governs the program and supersedes this section where the two
+conflict.
+
+**1. Warning.** A first instance of publishing ahead of the disclosure date
+results in a written warning from the security response team, recorded for the
+purpose of judging later instances. Where the reporter was eligible for a
+bounty, the report also becomes ineligible.
+
+**2. Suspension.** A repeat instance, or publishing something an attacker can
+act on immediately, makes the report ineligible and removes the reporter from
+any private notification or pre-disclosure list for 3 months. We continue to
+accept and act on their vulnerability reports during that period, but those
+reports are not eligible for a bounty.
+
+**3. Permanent block.** A pattern of improper disclosure, or publishing with
+intent to cause harm, results in a permanent block from the Cosmos organization
+and from any pre-disclosure list. The report is ineligible for a bounty. We
+still receive security reports from them, because closing that channel would put
+users at risk, but they take no further part in the project.
+
+Severity determines the level rather than the number of prior instances, so a
+sufficiently serious first instance may result in a permanent block without
+prior steps.
+
+The security response team decides these actions. To appeal one, write to
+[conduct@cosmos.network](mailto:conduct@cosmos.network), which is independent of
+the team that imposed it.
+
+------------------------------------------------------------------------
+
 ## Repository Scope
 
 Supported components are the ones listed in the current
