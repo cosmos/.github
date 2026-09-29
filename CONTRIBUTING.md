@@ -19,6 +19,9 @@ instead.
 
 ## Pull requests
 
+- Sign your commits. We reject unsigned commits. Either SSH or GPG works, and
+  [GitHub's signing guide](https://docs.github.com/en/authentication/managing-commit-signature-verification)
+  walks through both.
 - Limit each pull request to one logical change, and split larger work.
 - State what changed and why, and link the issue it closes.
 - Cover both the expected path and the error path with tests.
