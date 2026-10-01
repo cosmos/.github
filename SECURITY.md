@@ -122,13 +122,13 @@ build against the fix.
 Where a fix spans repositories that depend on each other, downstream teams point
 at the private repositories with `replace` directives in `go.mod`.
 
-### How teams learn a patch is available
+### Notification
 
-For a critical, we send an email to the security mailing list for that
-repository. For every other severity, teams watch the `-hotfix` tags on the
-private repository and decide from the patch details whether to pull a fix in.
-We do not email on each lower severity patch, because at the volume we patch it
-would be noise.
+Critical patches are announced by email to the security mailing list for the
+affected repository. Patches at all other severities are not announced
+individually. Teams track the `-hotfix` tags on the private repository and use
+the patch details to determine whether to adopt a fix ahead of the public
+release.
 
 ### Code freeze and public release
 
