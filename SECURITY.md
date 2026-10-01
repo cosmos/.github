@@ -122,6 +122,14 @@ build against the fix.
 Where a fix spans repositories that depend on each other, downstream teams point
 at the private repositories with `replace` directives in `go.mod`.
 
+### How teams learn a patch is available
+
+For a critical, we send an email to the security mailing list for that
+repository. For every other severity, teams watch the `-hotfix` tags on the
+private repository and decide from the patch details whether to pull a fix in.
+We do not email on each lower severity patch, because at the volume we patch it
+would be noise.
+
 ### Code freeze and public release
 
 The private repositories are frozen for the last week of each month. During the
