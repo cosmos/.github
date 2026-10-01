@@ -130,8 +130,8 @@ build against the fix.
 
 Where a fix spans repositories that depend on each other, downstream teams point
 at the private repositories with `replace` directives in `go.mod`. Move those
-back to the public tags at the monthly release: a private repository is deleted
-once its patches are public, and references to it stop resolving.
+back to the public tags at the monthly release. The private repository comes down
+two weeks after that, and references to it stop resolving.
 
 ### Notification
 
@@ -153,11 +153,15 @@ merged into the corresponding public repository, new patch releases are tagged,
 and a GHSA is published for each vulnerability with full details. That
 publication is the disclosure date.
 
-The frozen repositories are then deleted.
+The frozen repositories stay up for two weeks after that release so teams can
+move their builds across, and are deleted at the end of that window. Everything
+in them is public by then, so the window holds nothing back. Access to the next
+month's repositories is granted by fresh invitation on its own schedule, so the
+retention does not extend anyone's access.
 
 A vulnerability reported on August 12 and patched on August 15 therefore reaches
-the private repositories the same week, is frozen on August 25, and is public on
-September 1.
+the private repositories the same week, is frozen on August 25, is public on
+September 1, and the August repositories come down on September 15.
 
 ### Critical vulnerabilities
 
