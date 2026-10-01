@@ -11,6 +11,9 @@ This document defines the process for reporting vulnerabilities,
 describes the bug bounty program, and outlines Cosmos Labs’ approach to
 patching and public disclosure.
 
+Security patches are made privately at every severity and published on a
+monthly cycle. See [Security Patch Process](#security-patch-process).
+
 ------------------------------------------------------------------------
 
 ## Reporting a Vulnerability
@@ -62,7 +65,8 @@ Policy** and **Safe Harbor terms**.
 ## Vulnerability Severity Levels
 
 Reported vulnerabilities are assigned a severity classification that
-determines handling priority and disclosure timing.
+determines handling priority and reward. It does not determine how or when a
+fix is published: every severity follows the same patch process below.
 
 The definitions that define severity classification and the reward ranges that
 follow are maintained on our Immunefi page and not duplicated here. See the
@@ -74,57 +78,115 @@ classification methodology.
 
 ------------------------------------------------------------------------
 
-## Silent Patch and Disclosure Process
+## Security Patch Process
 
-Cosmos Labs follows a **silent patch** model for most security
-vulnerabilities. Issues are addressed privately and remediated prior to
-public disclosure.
+All security patches are made privately, at every severity. There is no separate
+public path for lower severity issues, and no severity-based decision about
+where a fix lands.
 
-This approach aligns with practices
-used by other major protocols, such as **Ethereum's Geth** (see
-https://geth.ethereum.org/docs/developers/geth-developer/disclosures),
-**Bitcoin Core** (see https://bitcoincore.org/en/security-advisories/),
-and **Zcash** (see https://z.cash/technology/security-advisories/).
+The process does not depend on how we learned of the vulnerability. A report
+through the bug bounty, a finding from an internal audit, and a direct
+disclosure all follow the same path.
 
-Premature disclosure can place unpatched networks at risk. Silent
-remediation allows operators time to upgrade before vulnerability
-details become public.
+### Monthly private repositories
 
-Vulnerabilities classified as **Critical** are handled on a case-by-case
-basis. When an issue presents an immediate or network-wide risk, Cosmos
-Labs will initiate emergency mitigations, private fix distribution, or
-coordinated upgrades before any public disclosure occurs.
+Cosmos Labs maintains a set of private repositories each month, one for each
+repository in bug bounty scope. Coverage targets the repositories downstream
+chains depend on most, including the Cosmos SDK, CometBFT, IBC-Go, Cosmos EVM,
+and the CosmWasm repositories. They are named for the repository and the month,
+for example `cosmos-sdk-priv-july-2026`.
 
-If Cosmos Labs determines that a vulnerability with **network-wide
-impact** (such as a chain halt or consensus failure) is already being
-actively exploited, or that attacker awareness is confirmed prior to a
-scheduled release, the issue is escalated and handled as **Critical** for
-response and disclosure purposes, regardless of its original
-classification.
+Access is granted to downstream teams that have passed KYC and run the
+repository in production. Each month's repositories are created fresh and
+collaborators are reinvited, which keeps the access list current. They are
+rebased periodically against `main` and the maintained release branches, so they
+stay current with their public counterparts.
 
-### Fix Distribution
+### Patch detail
 
-- Fixes are delivered through patch or minor releases.
-- Release notes may omit explicit references to security implications.
-- Validators and node operators may be notified privately to upgrade.
-- For critical vulnerabilities, fixes may be distributed privately to
-  key operators or require emergency network upgrades.
+Patches merged into a private repository are not obfuscated. A patch PR carries
+the description of the vulnerability, its root cause, severity, potential
+impact, and any tests that reproduce it.
 
-### Disclosure Timeline
+Downstream teams therefore hold the same information we do, and decide for
+themselves how their chain responds. Cosmos Labs does not make that call on
+their behalf.
 
-| **Severity**     | **Disclosure Timing**                                                      | **Details**                                                           |
-|------------------|----------------------------------------------------------------------------|-----------------------------------------------------------------------|
-| **Low / Medium** | Approximately four weeks after public release of the fix                   | Full advisory published with impact and remediation details.          |
-| **High**         | After the affected version reaches **End-of-Life (EOL)** (~1 year typical) | Disclosure delayed to reduce exploitation risk.                       |
-| **Critical**     | Case-by-case (At minimum after EOL)                                        | Disclosure only when deemed safe; details may be limited or withheld. |
+### Private distribution
+
+A team with access may use the patch however it needs to in order to build,
+vendoring included. The restriction is on passing the source on: until the patch
+is public, do not publish it in a public repository, do not commit it to one
+inside a vendored dependency tree, and do not make it available to validators or
+node operators.
+
+Distributing a built binary that contains the patch is allowed, through whatever
+mechanism the chain already uses, including GitHub release artifacts, provided no
+patch source is included.
+
+After each PR merges into a maintained release line, we tag a `-hotfix` version
+on that line, so teams that want to remediate ahead of the public release can
+build against the fix.
+
+Where a fix spans repositories that depend on each other, downstream teams point
+at the private repositories with `replace` directives in `go.mod`. Move those
+back to the public tags at the monthly release. The private repository comes down
+two weeks after that, and references to it stop resolving.
+
+### Notification
+
+Critical patches are announced by email to the security mailing list for the
+affected repository. Patches at all other severities are not announced
+individually. Teams track the `-hotfix` tags on the private repository and use
+the patch details to determine whether to adopt a fix ahead of the public
+release.
+
+### Code freeze and public release
+
+The private repositories are frozen for the last week of each month. During the
+freeze no further patches are merged into that month's repositories. They are
+merged into the next month's instead, which is why each month's set is created
+seven days early.
+
+At the start of the following month, every patch in the frozen repositories is
+merged into the corresponding public repository, new patch releases are tagged,
+and a GHSA is published for each vulnerability with full details. That
+publication is the disclosure date.
+
+The frozen repositories stay up for two weeks after that release so teams can
+move their builds across, and are deleted at the end of that window. Everything
+in them is public by then, so the window holds nothing back. Access to the next
+month's repositories is granted by fresh invitation on its own schedule, so the
+retention does not extend anyone's access.
+
+A vulnerability reported on August 12 and patched on August 15 therefore reaches
+the private repositories the same week, is frozen on August 25, is public on
+September 1, and the August repositories come down on September 15.
+
+### Critical vulnerabilities
+
+Criticals follow the same process, with two additions. We notify affected chains
+through the security mailing list for that repository that the month's private
+repository contains a critical patch. And a critical is not merged into a
+month's repository within three days of its freeze; one that would be goes into
+the next month's repository instead, which pushes its public release out by a
+month. Together with the week-long freeze, that leaves at least ten days between
+a critical landing in a private repository and its public release.
+
+### Active exploitation
+
+A vulnerability that is being actively exploited, or where we confirm attacker
+awareness ahead of the scheduled release, leaves the monthly cycle and is
+handled as an incident. That means emergency mitigations, private fix
+distribution, or a coordinated upgrade, ahead of any public disclosure. This
+applies regardless of the original severity classification.
 
 ------------------------------------------------------------------------
 
-## Transparency and Post-Disclosure
+## Advisories
 
-After expiration of the disclosure embargo, Cosmos Labs publishes a
-**Security Advisory** (via GitHub advisories or official blog posts)
-containing:
+A GitHub Security Advisory is published for every patched vulnerability at the
+monthly public release, containing:
 
 - Vulnerability description
 - Affected versions
@@ -132,8 +194,7 @@ containing:
 - Remediation guidance
 - Reporter attribution (unless anonymity is requested)
 
-All advisories remain publicly available. This delayed disclosure model
-balances ecosystem safety with long-term transparency.
+All advisories remain publicly available.
 
 ------------------------------------------------------------------------
 
@@ -143,23 +204,15 @@ ecosystem.
 
 ------------------------------------------------------------------------
 
-### References
-
-- [Bitcoin Core Security Advisories](https://bitcoincore.org/en/security-advisories/)
-- [Go Ethereum Vulnerability Disclosure](https://ethereumpow.github.io/go-ethereum/docs/vulnerabilities/vulnerabilities)
-- [Bitcoin Core Security Disclosure Policy Announcement](https://bitexes.com/blog/124272)
-
-------------------------------------------------------------------------
-
 ## Consequences of Improper Disclosure
 
-Publishing vulnerability details before their disclosure date puts users at risk
-whatever the intent. For High and Critical issues that date falls well after the
-fix ships.
+Publishing vulnerability details before their disclosure date puts users at
+risk whatever the intent. A fix reaches downstream chains privately before it is
+public, so early disclosure exposes chains that have not yet upgraded.
 
 We give the reporter a disclosure date. That date is the one that counts, and
-where we have not given one, the timeline above applies. Disclosure we have
-authorized is never a violation, whenever it happens.
+where we have not given one, it is the monthly public release that carries the
+fix. Disclosure we have authorized is never a violation, whenever it happens.
 
 The consequences below apply to anyone who publishes early, whether or not they
 submitted through the bug bounty program.
