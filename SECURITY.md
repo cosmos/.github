@@ -91,10 +91,10 @@ disclosure all follow the same path.
 ### Monthly private repositories
 
 Cosmos Labs maintains a set of private repositories each month, one for each
-repository in bug bounty scope. Coverage targets the repositories downstream
-chains depend on most, including the Cosmos SDK, CometBFT, IBC-Go, Cosmos EVM,
-and the CosmWasm repositories. They are named for the repository and the month,
-for example `cosmos-sdk-priv-july-2026`.
+repository in bug bounty scope. That includes the Cosmos SDK, CometBFT, IBC-Go,
+Cosmos EVM and the CosmWasm repositories, and is not limited to them. They
+are named for the repository and the month, for example
+`cosmos-sdk-priv-july-2026`.
 
 Access is granted to downstream teams that have passed KYC and run the
 repository in production. Each month's repositories are created fresh and
@@ -119,6 +119,18 @@ vendoring included. The restriction is on passing the source on: until the patch
 is public, do not publish it in a public repository, do not commit it to one
 inside a vendored dependency tree, and do not make it available to validators or
 node operators.
+
+A team that passes patch source to anyone outside the teams that already have
+access, before the patch is public, loses access to the private repositories,
+including the invitations to any future ones. This is a serious violation of
+secure disclosure and puts all other chains at risk.
+
+That is not a penalty under
+[Consequences of Improper Disclosure](#consequences-of-improper-disclosure).
+Access to the private repositories is granted on the condition that the source
+stays private, so breaking that condition ends the grant. Those consequences may
+apply as well, and we may take further action where the disclosure put chains at
+risk.
 
 Distributing a built binary that contains the patch is allowed, through whatever
 mechanism the chain already uses, including GitHub release artifacts, provided no
@@ -177,9 +189,10 @@ a critical landing in a private repository and its public release.
 
 A vulnerability that is being actively exploited, or where we confirm attacker
 awareness ahead of the scheduled release, leaves the monthly cycle and is
-handled as an incident. That means emergency mitigations, private fix
-distribution, or a coordinated upgrade, ahead of any public disclosure. This
-applies regardless of the original severity classification.
+handled immediately and separately as an incident. That means emergency
+mitigations, private fix distribution, or a coordinated upgrade, ahead of any
+public disclosure. This applies regardless of the original severity
+classification.
 
 ------------------------------------------------------------------------
 
