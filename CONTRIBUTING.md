@@ -14,7 +14,7 @@ applies throughout this organization. Report concerns to
 
 Never open a public issue, pull request, or discussion for a suspected
 vulnerability. Report it through the
-[security policy](https://github.com/cosmos/security/blob/main/SECURITY.md)
+[security policy](SECURITY.md)
 instead.
 
 ## Pull requests
