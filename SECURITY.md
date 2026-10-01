@@ -114,17 +114,24 @@ their behalf.
 
 ### Private distribution
 
-Patch source code must not be redistributed: not into a downstream codebase, and
-not to validators. Distributing a built binary that contains the patch is
-allowed, through whatever mechanism the chain already uses, including GitHub
-release artifacts, provided no patch source is included.
+A team with access may use the patch however it needs to in order to build,
+vendoring included. The restriction is on passing the source on: until the patch
+is public, do not publish it in a public repository, do not commit it to one
+inside a vendored dependency tree, and do not make it available to validators or
+node operators.
+
+Distributing a built binary that contains the patch is allowed, through whatever
+mechanism the chain already uses, including GitHub release artifacts, provided no
+patch source is included.
 
 After each PR merges into a maintained release line, we tag a `-hotfix` version
 on that line, so teams that want to remediate ahead of the public release can
 build against the fix.
 
 Where a fix spans repositories that depend on each other, downstream teams point
-at the private repositories with `replace` directives in `go.mod`.
+at the private repositories with `replace` directives in `go.mod`. Move those
+back to the public tags at the monthly release: a private repository is deleted
+once its patches are public, and references to it stop resolving.
 
 ### Notification
 
