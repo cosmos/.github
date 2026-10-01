@@ -120,10 +120,16 @@ is public, do not publish it in a public repository, do not commit it to one
 inside a vendored dependency tree, and do not make it available to validators or
 node operators.
 
-A team that passes patch source on before the patch is public loses access to
-the private repositories, including the invitations to any future ones. We may
-also take further action where the disclosure put chains at risk. This is a
-serious violation of secure disclosure and puts all other chains at risk.
+A team that passes patch source on, to anyone outside the teams that already
+have access, before the patch is public loses access to the private
+repositories, including the invitations to any future ones. This is a serious
+violation of secure disclosure and puts all other chains at risk.
+
+That is not a penalty under Consequences of Improper Disclosure below. Access to
+the private repositories is granted on the condition that the source stays
+private, so breaking that condition ends the grant. Those consequences may apply
+as well, and we may take further action where the disclosure put chains at
+risk.
 
 Distributing a built binary that contains the patch is allowed, through whatever
 mechanism the chain already uses, including GitHub release artifacts, provided no
