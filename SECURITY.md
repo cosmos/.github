@@ -84,6 +84,10 @@ All security patches are made privately, at every severity. There is no separate
 public path for lower severity issues, and no severity-based decision about
 where a fix lands.
 
+The process does not depend on how we learned of the vulnerability. A report
+through the bug bounty, a finding from an internal audit, and a direct
+disclosure all follow the same path.
+
 ### Monthly private repositories
 
 Cosmos Labs maintains a set of private repositories each month, one for each
@@ -152,9 +156,11 @@ September 1.
 
 Criticals follow the same process, with two additions. We notify affected chains
 through the security mailing list for that repository that the month's private
-repository contains a critical patch. And a critical merged fewer than three
-days before the freeze begins moves to the next month's repository, so chains
-have at least ten days to mitigate privately before the fix is public.
+repository contains a critical patch. And a critical is not merged into a
+month's repository within three days of its freeze; one that would be goes into
+the next month's repository instead, which pushes its public release out by a
+month. Together with the week-long freeze, that leaves at least ten days between
+a critical landing in a private repository and its public release.
 
 ### Active exploitation
 
