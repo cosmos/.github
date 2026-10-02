@@ -99,9 +99,9 @@ are named for the repository and the month, for example
 Access is granted to chain development teams and to major exchange partners.
 Both must have passed KYC and run the repository in production. Each month's
 repositories are created fresh and collaborators are reinvited, which keeps the
-access list current. They are
-rebased periodically against `main` and the maintained release branches, so they
-stay current with their public counterparts.
+access list current. They are rebased periodically against `main` and the
+maintained release branches, so they stay current with their public
+counterparts.
 
 ### Patch detail
 
