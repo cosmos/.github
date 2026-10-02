@@ -173,8 +173,9 @@ month's repositories is granted by fresh invitation on its own schedule, so the
 retention does not extend anyone's access.
 
 As an example, a vulnerability reported on August 12 and patched on August 15
-reaches the private repositories the same week, is frozen on August 25, is
-public on September 1, and the August repositories come down on September 15.
+reaches the private repositories the same week. Those repositories freeze on
+August 25, their patches go public on September 1, and the repositories come
+down on September 15.
 
 ### Critical vulnerabilities
 
