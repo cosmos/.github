@@ -236,24 +236,25 @@ conflict.
 
 **1. Warning.** A first instance of publishing ahead of the disclosure date
 results in a written warning from the security response team, recorded for the
-purpose of judging later instances. Where the reporter was eligible for a
-bounty, the report also becomes ineligible.
+purpose of judging later instances.
 
-**2. Suspension.** A repeat instance, or publishing something an attacker can
-act on immediately, makes the report ineligible and removes the reporter from
-any private notification or pre-disclosure list for 3 months. We continue to
-accept and act on their vulnerability reports during that period, but those
-reports are not eligible for a bounty.
+**2. Suspension.** A repeat instance removes the reporter from any private
+notification or pre-disclosure list for 3 months. We continue to accept and act
+on their vulnerability reports during that period, but those reports are not
+eligible for a bounty.
 
 **3. Permanent block.** A pattern of improper disclosure, or publishing with
 intent to cause harm, results in a permanent block from the Cosmos organization
-and from any pre-disclosure list. The report is ineligible for a bounty. We
-still receive security reports from them, because closing that channel would put
-users at risk, but they take no further part in the project.
+and from any pre-disclosure list, and no further reports from them are eligible
+for a bounty. We still receive security reports from them, because closing that
+channel would put users at risk, but they take no further part in the project.
+
+At every level, a bounty already earned on the report that prompted the action
+is still paid. What changes is eligibility going forward.
 
 Severity determines the level rather than the number of prior instances, so a
-sufficiently serious first instance may result in a permanent block without
-prior steps.
+sufficiently serious first instance may result in a suspension or a permanent
+block without prior steps.
 
 The security response team decides these actions. To appeal one, write to
 [conduct@cosmos.network](mailto:conduct@cosmos.network), which is independent of
