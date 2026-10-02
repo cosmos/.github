@@ -236,8 +236,7 @@ conflict.
 
 **1. Warning.** A first instance of publishing ahead of the disclosure date
 results in a written warning from the security response team, recorded for the
-purpose of judging later instances. A bounty already earned on the report is
-still paid.
+purpose of judging later instances.
 
 **2. Suspension.** A repeat instance removes the reporter from any private
 notification or pre-disclosure list for 3 months. We continue to accept and act
@@ -249,6 +248,9 @@ intent to cause harm, results in a permanent block from the Cosmos organization
 and from any pre-disclosure list, and no further reports from them are eligible
 for a bounty. We still receive security reports from them, because closing that
 channel would put users at risk, but they take no further part in the project.
+
+At every level, a bounty already earned on the report that prompted the action
+is still paid. What changes is eligibility going forward.
 
 Severity determines the level rather than the number of prior instances, so a
 sufficiently serious first instance may result in a suspension or a permanent
