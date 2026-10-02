@@ -251,8 +251,8 @@ for a bounty. We still receive security reports from them, because closing that
 channel would put users at risk, but they take no further part in the project.
 
 Severity determines the level rather than the number of prior instances, so a
-sufficiently serious first instance may result in a permanent block without
-prior steps.
+sufficiently serious first instance may result in a suspension or a permanent
+block without prior steps.
 
 The security response team decides these actions. To appeal one, write to
 [conduct@cosmos.network](mailto:conduct@cosmos.network), which is independent of
