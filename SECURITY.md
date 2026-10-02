@@ -174,7 +174,8 @@ retention does not extend anyone's access.
 
 As an example, a vulnerability reported on August 12 and patched on August 15
 reaches the private repositories the same week. Those repositories freeze on
-August 25, go public on September 1, and come down on September 15.
+August 25, their patches go public on September 1, and the repositories come
+down on September 15.
 
 ### Critical vulnerabilities
 
