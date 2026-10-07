@@ -92,9 +92,10 @@ disclosure all follow the same path.
 
 Cosmos Labs maintains a set of private repositories each month, one for each
 repository in bug bounty scope. That includes the Cosmos SDK, CometBFT, IBC-Go,
-Cosmos EVM and the CosmWasm repositories, and is not limited to them. They
-are named for the repository and the month, for example
-`cosmos-sdk-priv-july-2026`.
+Cosmos EVM and the CosmWasm repositories, and is not limited to them. They are
+named for the repository and the date the patches will be made public, for
+example the `cosmos-sdk-priv-nov-1-2026` repository contains patches that will
+be made public on November 1st, 2026.
 
 Access is granted to chain development teams and to major exchange partners.
 Both must have passed KYC and run the repository in production. Each month's
