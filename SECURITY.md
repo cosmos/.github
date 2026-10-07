@@ -156,9 +156,9 @@ release.
 
 ### Code freeze and public release
 
-The private repositories are frozen for the last week of each month. During the
-freeze no further patches are merged into that month's repositories. They go
-into the next month's set instead, which is created seven days before the month
+The private repositories are frozen for the last 10 days of each month. During
+the freeze no further patches are merged into that month's repositories. They
+go into the next month's set instead, which is created 10 days before the month
 begins so that it is ready to receive them.
 
 At the start of the following month, every patch in the frozen repositories is
@@ -174,7 +174,7 @@ retention does not extend anyone's access.
 
 As an example, a vulnerability reported on August 12 and patched on August 15
 reaches the private repositories the same week. Those repositories freeze on
-August 25, their patches go public on September 1, and the repositories come
+August 22, their patches go public on September 1, and the repositories come
 down on September 15.
 
 ### Critical vulnerabilities
