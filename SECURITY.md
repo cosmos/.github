@@ -184,7 +184,7 @@ through the security mailing list for that repository that the month's private
 repository contains a critical patch. And a critical is not merged into a
 month's repository within three days of its freeze; one that would be goes into
 the next month's repository instead, which pushes its public release out by a
-month. Together with the week-long freeze, that leaves at least ten days between
+month. Together with the 10 day long freeze, that leaves at least 13 days between
 a critical landing in a private repository and its public release.
 
 ### Active exploitation
