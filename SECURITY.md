@@ -138,55 +138,40 @@ Distributing a built binary that contains the patch is allowed, through whatever
 mechanism the chain already uses, including GitHub release artifacts, provided no
 patch source is included.
 
-After each PR merges into a maintained release line, we tag a `-hotfix` version
-on that line, so teams that want to remediate ahead of the public release can
-build against the fix.
+All patched vulnerabilities will be tagged with a `-rcX` version on each
+maintained release line that includes the patch, so teams that want to
+remediate ahead of the public release can build against tags.
 
 Where a fix spans repositories that depend on each other, downstream teams point
 at the private repositories with `replace` directives in `go.mod`. Move those
 back to the public tags at the monthly release. The private repository comes down
 two weeks after that, and references to it stop resolving.
 
-### Notification
+### Sharing and public release
 
-Critical patches are announced by email to the security mailing list for the
-affected repository. Patches at all other severities are not announced
-individually. Teams track the `-hotfix` tags on the private repository and use
-the patch details to determine whether to adopt a fix ahead of the public
-release.
+Each month's private repositories are shared 10 days before the end of the
+month, the patches that are in the repository at the time of sharing are final,
+no additional patches will be added.
 
-### Code freeze and public release
+When the repositories are shared, we email the invited teams an overview of the
+vulnerabilities contained in the repositories. Teams then have the 10 days
+before public release to review the patches and decide whether to patch
+privately ahead of it.
 
-The private repositories are frozen for the last 10 days of each month. During
-the freeze no further patches are merged into that month's repositories. They
-go into the next month's set instead, which is created 10 days before the month
-begins so that it is ready to receive them.
+At the start of the following month (on the date that is in the name of the
+disclosure repository), all patches in the shared repositories are merged into
+the corresponding public repository, new patch releases are tagged, and a GHSA
+is published for each vulnerability with full details.
 
-At the start of the following month, every patch in the frozen repositories is
-merged into the corresponding public repository, new patch releases are tagged,
-and a GHSA is published for each vulnerability with full details. That
-publication is the disclosure date.
+The private repositories stay up for two weeks after that release so teams can
+move their builds across, and are deleted at the end of that window. Access to
+the next month's repositories is granted by fresh invitation when that month's
+set is shared, so the retention does not extend anyone's access.
 
-The frozen repositories stay up for two weeks after that release so teams can
-move their builds across, and are deleted at the end of that window. Everything
-in them is public by then, so the window holds nothing back. Access to the next
-month's repositories is granted by fresh invitation on its own schedule, so the
-retention does not extend anyone's access.
-
-As an example, a vulnerability reported on August 12 and patched on August 15
-reaches the private repositories the same week. Those repositories freeze on
-August 22, their patches go public on September 1, and the repositories come
-down on September 15.
-
-### Critical vulnerabilities
-
-Criticals follow the same process, with two additions. We notify affected chains
-through the security mailing list for that repository that the month's private
-repository contains a critical patch. And a critical is not merged into a
-month's repository within three days of its freeze; one that would be goes into
-the next month's repository instead, which pushes its public release out by a
-month. Together with the 10 day long freeze, that leaves at least 13 days between
-a critical landing in a private repository and its public release.
+As an example, a Cosmos SDK vulnerability reported on August 12th and patched
+on August 15th will be included in the `cosmos-sdk-priv-sep-1-2026` disclosure
+repository. This repository is shared with teams on August 22nd, its patches go
+public on September 1st, and the repository comes down on September 15th.
 
 ### Active exploitation
 
